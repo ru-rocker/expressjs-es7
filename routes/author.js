@@ -9,12 +9,12 @@ exports.searchAuthor = async function(req, res, next) {
     const payload = {
       index: process.env.ES_CONTRACT_INDEX,
       body: {
-        "query": {
-          "bool": {
-            "must": [{
-              "query_string": {
-                 "fields": ["author.first_name","author.middle_name","author.last_name"],
-                 "query": req.query.keyword || '*'
+        query: {
+          bool: {
+            must: [{
+              query_string: {
+                 fields: ["author.first_name","author.middle_name","author.last_name"],
+                 query: req.query.keyword || '*'
               }
             }]
           }

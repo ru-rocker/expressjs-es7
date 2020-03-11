@@ -9,12 +9,12 @@ exports.searchTitle = async function(req, res, next) {
     const payload = {
       index: process.env.ES_CONTRACT_INDEX,
       body: {
-        "query": {
-          "bool": {
-            "must": [{
-              "query_string": {
-                "default_field": "title",
-                "query": req.query.keyword || '*'
+        query: {
+          bool: {
+            must: [{
+              query_string: {
+                default_field: "title",
+                query: req.query.keyword || '*'
               }
             }]
           }
