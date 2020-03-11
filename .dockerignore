@@ -1,0 +1,27 @@
+.gitignore
+.git
+.idea
+.nycrc
+.eslintrc.js
+.nyc_output
+.scannerwork
+.vscode
+.sonar
+.config
+.bash_history
+?
+
+node_modules
+npm-debug.log
+README.md
+sonar-project.properties
+test
+sample
+openshift
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage
