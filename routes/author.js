@@ -33,7 +33,7 @@ exports.searchAuthor = async function(req, res, next) {
 
     var results = {
       content: parseBody(body)
-        .map(function (i) { return _.omit(i._source, 'attEventDate') })
+        .map(function (i) { return _.omit(i._source, 'key') })
     }
 
     var totalResults = {
